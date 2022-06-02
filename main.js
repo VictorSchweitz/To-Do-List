@@ -4,40 +4,33 @@ const errorToast = document.getElementById('error-toast')
 const todoList = document.getElementById('todo-list')
 const todoInput = document.getElementById('todo-input')
 
-addTodoButton.addEventListener('click', () =>
-{
-   showToast()
-   addTodo()
+addTodoButton.addEventListener('click', (e) => {
+   e.preventDefault();
+   showToast();
+   addTodo();
 })
 
-function showToast()
-{
-   if (todoInput.value !== '' && todoInput.value !== ' ')
-   {
+function showToast() {
+   if (todoInput.value !== '' && todoInput.value !== ' ') {
       successToast.classList.add('active')
-      todoInput.value = ''
+      // todoInput.value = '' removed 
 
-      setTimeout(() =>
-      {
+      setTimeout(() => {
          successToast.classList.remove('active')
       }, 1500)
    }
-   else
-   {
+   else {
       errorToast.classList.add('active')
       addTodoButton.disabled = true
 
-      setTimeout(() =>
-      {
+      setTimeout(() => {
          errorToast.classList.remove('active')
          addTodoButton.disabled = false
       }, 1500)
    }
 }
 
-function addTodo()
-{
-
+function addTodo() {
    // Create new <li></li> element
    let newTodoEl = document.createElement('li')
 
@@ -52,5 +45,10 @@ function addTodo()
    let text = document.createTextNode(todoInput.value)
 
    // Outputting the value as a <span></span> element inside the <li></li> element
-   newTextWrapper.appendChild(text)
+   newTextWrapper.appendChild(text);
+
+   //added
+   newTodoEl.appendChild(newTextWrapper);
+   todoList.appendChild(newTodoEl);
+   todoInput.value = '';
 }
