@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/global.css">
+   <link rel="stylesheet" href="css/utilities.css">
+   <script src="https://kit.fontawesome.com/e05f21b32e.js" crossorigin="anonymous"></script>
+   <script src="main.js" defer></script>
+   <title>To Do List</title>
+</head>
+
+<body>
+   <header>
+      <h1>To Do List</h1>
+   </header>
+
+   <div class="input-container">
+      <input type="text" class="todo-input" id="todo-input" placeholder="Add Todo">
+      <button class="btn add-todo-btn" id="add-todo-btn">
+         <i class="fas fa-plus"></i>
+      </button>
+   </div>
+
+   <!-- Success Toast -->
+   <div class="toast success-toast" id="success-toast">
+      <i class="fas fa-check"></i>
+      <h3>Todo Added!</h3>
+   </div>
+
+   <!-- Error Toast -->
+   <div class="toast error-toast" id="error-toast">
+      <i class="fas fa-times"></i>
+      <h3>Todo not added!</h3>
+   </div>
+
+
+   <!-- Todo List Itself -->
+   <ul class="todo-list" id="todo-list">
+      <li class="todo-list-el" id="todo-list-el">
+         <!-- <span>Buy Groceries</span>
+         <div class="btn-container" id="btn-container">
+
+            <button class="btn delete-btn" id="delete-btn">X</button>
+            <button class="btn done-btn" id="done-btn">Done</button>
+         </div> -->
+      </li>
+   </ul>
+</body>
+
+</html>

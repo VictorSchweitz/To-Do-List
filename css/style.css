@@ -1,0 +1,136 @@
+/* Header */
+header
+{
+   position: absolute;
+   left: 50%;
+   top: 10%;
+   transform: translateX(-50%);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+header h1
+{
+   margin-bottom: 20px;
+}
+
+/* Input Container */
+.input-container
+{  
+   margin-top: 12%;
+   margin-left: 35vw;
+   white-space: nowrap;
+}
+
+.input-container input
+{
+   border: 2px solid var(--success-color);
+   height: 70px;
+   width: 30vw;
+   border-radius: var(--base-border-radius) 0 0 var(--base-border-radius);
+   height: 70px;
+   font-size: 20px;
+   text-indent: 20px;
+   transition: box-shadow .15s ease-in;
+}
+
+.input-container input:focus
+{
+   box-shadow: inset var(--box-shadow);
+   transition: box-shadow .15s ease-in;
+}
+
+/* Add Todo Button */
+button.btn.add-todo-btn
+{
+   margin-left: -5px;
+   margin-top: -2px;
+   height: 70px;
+   padding: 10px 20px;
+   background-color: var(--success-color);
+   font-size: 20px;
+   color: var(--primary-color);
+   cursor: pointer;
+   border-radius: 0 var(--base-border-radius) var(--base-border-radius) 0;
+}
+
+/* Toasts */
+.toast.success-toast
+{
+   border: 2px solid var(--success-color);
+ 
+}
+
+.toast.success-toast i
+{
+   background-color: var(--success-color);
+}
+
+.toast.success-toast h3
+{
+   color: var(--success-color);
+}
+
+.toast.error-toast
+{
+   border: 2px solid var(--error-color);
+}
+
+.toast.error-toast i
+{
+   background-color: var(--error-color);
+}
+
+.toast.error-toast h3
+{
+   color: var(--error-color);
+   left: 32%;
+}
+
+.todo-list {
+   display: flex;
+   position: absolute;
+   top: 40%;
+}
+
+.todo-list li {
+   list-style: none;
+   font-size: 17px;
+}
+
+/* .todo-list-el .btn-container {
+   display: flex;
+   flex-direction: column;
+} */
+
+.todo-list li button {
+   margin-left: 10px;
+   padding: 10px;
+   color: var(--main-font-color);;
+   border-radius: 5px;
+   font-size: 17px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+   cursor: pointer;
+}
+
+.todo-list li button:active {
+   box-shadow: none;
+   transform: scale(.98);
+}
+
+.todo-list li button.delete-btn {
+   background-color: var(--delete-btn-bg-color);
+}
+
+.todo-list li button.done-btn {
+   background-color: var(--done-btn-bg-color);
+}
+
+
+.todo-done {
+   color: var(--done-btn-bg-color);
+   text-decoration: 2px solid line-through;
+}
